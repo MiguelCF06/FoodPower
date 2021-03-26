@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c947607783f956547a2ecf434d9956e0
+guid: 88015c4f1c339b141b0df35673b6a5e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4847981942072224038
-    second: Ventilador_1
+      213: -4389710733024242597
+    second: Ventilador 1_1
   - first:
-      213: -3262867180297247083
-    second: Ventilador_2
+      213: 6133323214102921981
+    second: Ventilador 1_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ventilador_0
+      name: Ventilador 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -123,14 +123,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa1a5b8589b9b8110800000000000000
-      internalID: 1264275199033188778
+      spriteID: 7219cb93b33686ff0800000000000000
+      internalID: -42675090437140185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ventilador_1
+      name: Ventilador 1_1
       rect:
         serializedVersion: 2
         x: 25
@@ -144,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad6d6410c1288bcb0800000000000000
-      internalID: -4847981942072224038
+      spriteID: b54de53985d9413c0800000000000000
+      internalID: -4389710733024242597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ventilador_2
+      name: Ventilador 1_2
       rect:
         serializedVersion: 2
         x: 50
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5962a114697f7b2d0800000000000000
-      internalID: -3262867180297247083
+      spriteID: df2034da7f0fd1550800000000000000
+      internalID: 6133323214102921981
       vertices: []
       indices: 
       edges: []
