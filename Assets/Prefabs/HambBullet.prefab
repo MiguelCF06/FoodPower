@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4627557000624790956}
   m_Layer: 0
   m_Name: HambBullet
-  m_TagString: Untagged
+  m_TagString: HambBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,3 +137,4 @@ MonoBehaviour:
   speed: 20
   damage: 20
   rigidBody2D: {fileID: 1628883096303261446}
+  btime: 0

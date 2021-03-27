@@ -7,13 +7,14 @@ public class PlayerStatus : MonoBehaviour
 {
     public int health = 100;
     public SpriteRenderer playerSpriteRend;
-    public float amountOfPoints;
+    public int amountOfPoints;
     public Manager manager;
     public Text playerHealth;
     public Image healthI;
 
     void Update() 
     {
+        manager.dieCounter = amountOfPoints;
         playerHealth.text = health.ToString() + "%";
         ChangeColor();
     }
@@ -35,9 +36,24 @@ public class PlayerStatus : MonoBehaviour
         }
     }
     
-    public void AssignPoints(float points)
+
+    void Die()
     {
-        amountOfPoints += points;
+        playerHealth.text = health.ToString() + "%";
+        Destroy(gameObject);
+        manager.SetGameOver();
+    }
+
+    public void AssignPoints(int points)
+    {
+        if (amountOfPoints == manager.totalOfEnemiesToKill)
+        {
+            amountOfPoints = manager.totalOfEnemiesToKill;
+        }
+        else
+        {
+            amountOfPoints += points;
+        }
     }
 
     IEnumerator changePlayerColor()
@@ -45,13 +61,6 @@ public class PlayerStatus : MonoBehaviour
         playerSpriteRend.color = new Color(1, 0, 0, 1);
         yield return new WaitForSeconds(1);
         playerSpriteRend.color = new Color(1, 1, 1, 1);
-    }
-
-    void Die()
-    {
-        playerHealth.text = health.ToString() + "%";
-        Destroy(gameObject);
-        manager.SetGameOver();
     }
 
     void ChangeColor()

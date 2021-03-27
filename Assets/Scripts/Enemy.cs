@@ -15,13 +15,11 @@ public class Enemy : MonoBehaviour
 
     private Weapon playerWeaponType;
     private PlayerStatus assignPoints;
-    public Manager manager;
 
     void Awake()
     {
         playerWeaponType = GameObject.Find("Player").GetComponent<Weapon>();
         assignPoints = GameObject.Find("Player").GetComponent<PlayerStatus>();
-        manager = FindObjectOfType<Manager>();
     }
 
     public void TakeDamage(int damage)
@@ -50,12 +48,10 @@ public class Enemy : MonoBehaviour
                 }   
             }
         }
-        
     }
 
     void Die()
     {
-        manager.dieCounter += 1;
         int pointsToAssign = 1;
         assignPoints.AssignPoints(pointsToAssign);
         Destroy(gameObject);

@@ -67,7 +67,8 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else
         {
-            StopAttack();
+            if (enemyType == EnemiesType.Toast)
+                StopAttack();
         }
 
         // When player is detected

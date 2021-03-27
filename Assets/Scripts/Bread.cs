@@ -8,9 +8,14 @@ public class Bread : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         Enemy enemy = collider.GetComponent<Enemy>();
+        BossHitDown bossBottomCollider = collider.GetComponent<BossHitDown>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
-        }   
+        }
+        else if (bossBottomCollider != null)
+        {
+            bossBottomCollider.TakeDamage(damage);
+        }
     }
 }

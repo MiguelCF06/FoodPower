@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - HambBullet
+  - BossTopCollider
+  - BossBottomCollider
   layers:
   - Default
   - TransparentFX

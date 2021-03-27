@@ -18,10 +18,16 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         Enemy enemy = collider.GetComponent<Enemy>();
+        BossHitTop bossTopCollider = collider.GetComponent<BossHitTop>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
         }
+        else if (bossTopCollider != null)
+        {
+            bossTopCollider.TakeDamage(damage);
+        }
+
         Destroy(gameObject);    
     }
 
@@ -36,11 +42,11 @@ public class Bullet : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            btime = 0.7f;
+            btime = 0.9f;
         }
         else
         {
-            btime = 0.4f;
+            btime = 0.5f;
         }
     }
 }

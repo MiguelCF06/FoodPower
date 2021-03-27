@@ -9,11 +9,14 @@ public class Manager : MonoBehaviour
     public GameObject panel;
     public bool pause;
     public bool gameOver;
+    public bool canPassLevel;
     public GameObject PauseMenu;
     public GameObject GameOver;
     public int dieCounter = 0;
     public Text enemies;
     public Image enemigos;
+    public int totalOfEnemiesToKill;
+    public string activeScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,21 +27,37 @@ public class Manager : MonoBehaviour
         StartCoroutine("destroyBullet");
         gameOver = false;
         pause = false;
+        canPassLevel = false;
         PauseMenu.SetActive(false);
         GameOver.SetActive(false);
+        activeScene = SceneManager.GetActiveScene().name.ToString();
+
+        if (activeScene == "Level01")
+            totalOfEnemiesToKill = 25;
+        else if (activeScene == "Level02")
+            totalOfEnemiesToKill = 30;
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemies.text = dieCounter.ToString() + "/25";
+        if (activeScene == "Level01")
+            enemies.text = dieCounter.ToString() + "/25";
+        else if (activeScene == "Level02")
+            enemies.text = dieCounter.ToString() + "/30";
+        else if (activeScene == "Level03")
+        {
+            enemigos.gameObject.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.P) && !gameOver)
         {
             PausarJuego();
         }
-        if (dieCounter >= 25)
+        if (dieCounter >= totalOfEnemiesToKill)
         {
             enemigos.color = Color.green;
+            canPassLevel = true;
         }
     }
 
@@ -63,12 +82,19 @@ public class Manager : MonoBehaviour
             PauseMenu.SetActive(false);
         }
     }
+
     public void SetGameOver()
     {
         Time.timeScale = 0;
         pause = true;
         gameOver = true;
         GameOver.SetActive(true);
+    }
+
+    public void LoadLevel()
+    {
+        // load the nextlevel
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void BackToMenu()
