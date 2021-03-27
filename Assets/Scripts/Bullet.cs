@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            btime = 0.6f;
+            btime = 0.7f;
         }
         else
         {

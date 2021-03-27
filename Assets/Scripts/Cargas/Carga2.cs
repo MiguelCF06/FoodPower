@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Carga1 : MonoBehaviour
+public class Carga2 : MonoBehaviour
 {
     void Start()
     {
@@ -12,7 +12,7 @@ public class Carga1 : MonoBehaviour
     IEnumerator fade1()
     {
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Cinematica1");
+        SceneManager.LoadScene("Level01");
         Time.timeScale = 1;
     }
 }

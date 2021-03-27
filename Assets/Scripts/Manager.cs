@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -9,9 +11,14 @@ public class Manager : MonoBehaviour
     public bool gameOver;
     public GameObject PauseMenu;
     public GameObject GameOver;
+    public int dieCounter = 0;
+    public Text enemies;
+    public Image enemigos;
     // Start is called before the first frame update
     void Start()
     {
+        enemigos.color = Color.white;
+        dieCounter = 0;
         Time.timeScale = 1;
         panel.SetActive(true);
         StartCoroutine("destroyBullet");
@@ -24,9 +31,14 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemies.text = dieCounter.ToString() + "/25";
         if (Input.GetKeyDown(KeyCode.P) && !gameOver)
         {
             PausarJuego();
+        }
+        if (dieCounter >= 25)
+        {
+            enemigos.color = Color.green;
         }
     }
 
@@ -57,5 +69,17 @@ public class Manager : MonoBehaviour
         pause = true;
         gameOver = true;
         GameOver.SetActive(true);
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ResumeB()
+    {
+        Time.timeScale = 1;
+        pause = false;
+        PauseMenu.SetActive(false);
     }
 }
