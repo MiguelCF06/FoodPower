@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public enum WeaponType
+    {
+        Hamburguer,
+        Bread
+    }
+
+    #region Public Variables
     public Transform firePoint;
     public GameObject hambBulletPrefab;
     public GameObject playerHamburguesa;
@@ -11,7 +18,11 @@ public class Weapon : MonoBehaviour
     public GameObject playerGelatina;
     public Animator anim;
     public bool canAttack;
+    public bool defendingMode;
     public Manager manager;
+    public WeaponType weaponType;
+    #endregion
+
 
     void Start()
     {
@@ -31,6 +42,7 @@ public class Weapon : MonoBehaviour
             playerHamburguesa.SetActive(true);
             playerPan.SetActive(false);
             anim.SetTrigger("hamburguesa");
+            weaponType = WeaponType.Hamburguer;
         }
 
         if (Input.GetKeyDown(KeyCode.X) && canAttack && !manager.pause)
@@ -38,18 +50,20 @@ public class Weapon : MonoBehaviour
             playerHamburguesa.SetActive(false);
             playerPan.SetActive(true);
             anim.SetTrigger("pan");
+            weaponType = WeaponType.Bread;
         }
 
         if (Input.GetKey(KeyCode.C) && !manager.pause)
         {
             playerGelatina.SetActive(true);
             canAttack = false;
+            defendingMode = true;
         }
-
         else
         {
             playerGelatina.SetActive(false);
             canAttack = true;
+            defendingMode = false;
         }
     }
     void Shoot()

@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    public enum EnemiesType
+    {
+        Toast,
+        Gelatina
+    }
+
     #region Public Variables
     public Transform rayCast;
-    public Transform playerTransform;
     public LayerMask raycastMask;
     public float raycastLength;
     public float attackDistance; // Minimum distance for attack
     public float moveSpeed;
     public float timer; // Cooldown between attacks
+    public EnemiesType enemyType;
     #endregion
 
     #region Private Variables
@@ -26,6 +32,7 @@ public class EnemyBehaviour : MonoBehaviour
     private float intTimer;
     private float initialRaycastLength;
     private float invertedRaycastLength;
+    private GameObject playerTransform;
     #endregion
 
     void Awake()
@@ -34,18 +41,19 @@ public class EnemyBehaviour : MonoBehaviour
         animator = GetComponent<Animator>();
         initialRaycastLength = raycastLength;
         invertedRaycastLength = initialRaycastLength * -1;
+        playerTransform = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform != null && playerTransform.position.x > transform.position.x)
+        if (playerTransform != null && playerTransform.transform.position.x > transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             lookingRight = true;
             raycastLength = invertedRaycastLength;
         }
-        else if (playerTransform != null && playerTransform.position.x < transform.position.x)
+        else if (playerTransform != null && playerTransform.transform.position.x < transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             lookingRight = false;
@@ -105,20 +113,30 @@ public class EnemyBehaviour : MonoBehaviour
     {
         distance = Vector2.Distance(transform.position, target.transform.position);
 
-        if (distance > attackDistance)
+        if (enemyType == EnemiesType.Gelatina)
         {
-            Move();
-            StopAttack();
+            if (distance > attackDistance)
+            {
+                Move();
+            }
         }
-        else if (attackDistance >= distance && !cooling)
+        else
         {
-            Attack();
-        }
+            if (distance > attackDistance)
+            {
+                Move();
+                StopAttack();
+            }
+            else if (attackDistance >= distance && !cooling)
+            {
+                Attack();
+            }
 
-        if (cooling)
-        {
-            Cooldown();
-            animator.SetBool("Attack", false);
+            if (cooling)
+            {
+                Cooldown();
+                animator.SetBool("Attack", false);
+            }
         }
     }
 
