@@ -31,7 +31,7 @@ public class PlayerStatus : MonoBehaviour
 
         if (health <= 0)
         {
-            playerHealth.text = health.ToString() + "%";
+            playerHealth.text = "0%";
             Die();
         }
     }
@@ -39,7 +39,7 @@ public class PlayerStatus : MonoBehaviour
 
     void Die()
     {
-        playerHealth.text = health.ToString() + "%";
+        playerHealth.text = "0%";
         Destroy(gameObject);
         manager.SetGameOver();
     }

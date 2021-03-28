@@ -8,7 +8,7 @@ public class Cinematica1 : MonoBehaviour
     public GameObject fade;
    void Start() 
    {
-       fade.SetActive(true);
+       fade.SetActive(false);
        StartCoroutine("fade1");
    }
    IEnumerator fade1()
@@ -20,7 +20,7 @@ public class Cinematica1 : MonoBehaviour
     IEnumerator cinematic()
     {
         yield return new WaitForSeconds(7);
-        fade.SetActive(true);
+        fade.SetActive(false);
         StartCoroutine("loadscene");
     }
     IEnumerator loadscene()

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 116844644}
   - component: {fileID: 3866253175877200695}
+  - component: {fileID: 116844646}
   m_Layer: 0
   m_Name: BottomCollider
   m_TagString: BossBottomCollider
@@ -57,6 +58,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16166294, y: 0.14119038}
   m_EdgeRadius: 0
+--- !u!114 &116844646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116844643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6241f37a6fd178e4d93f3c8bcca06381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1773973022
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773973023}
   - component: {fileID: 1773973024}
+  - component: {fileID: 1773973025}
   m_Layer: 0
   m_Name: TopCollider
   m_TagString: BossTopCollider
@@ -101,7 +115,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.010565899}
+  m_Offset: {x: 0.0031659752, y: 0.010565899}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -112,8 +126,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16960183, y: 0.1903949}
+  m_Size: {x: 0.16326988, y: 0.1903949}
   m_EdgeRadius: 0
+--- !u!114 &1773973025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773973022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521bb11bd9db5fe48a03ae783f6a734d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2094561552
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 7245278431182957255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51.6, y: 0.87, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 22.092001, y: 22.092001, z: 0.7364}
   m_Children:
   - {fileID: 2094561553}
   - {fileID: 1773973023}
@@ -285,9 +311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251167aa55126f64896ca30f0084ffc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1000
   bossBullet: {fileID: 1833504901788397150, guid: 80ad724d744d70f4ab5a71e1fdd5fe8c, type: 3}
   firePoint: {fileID: 2094561553}
   startTimeBtwShots: 3
+  bossHealth: {fileID: 0}
+  bossColor: {fileID: 0}
 --- !u!61 &1041547541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -301,7 +330,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0052829906, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -312,5 +341,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.46}
+  m_Size: {x: 0.15943404, y: 0.46}
   m_EdgeRadius: 0

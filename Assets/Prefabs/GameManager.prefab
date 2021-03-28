@@ -55,6 +55,7 @@ MonoBehaviour:
   enemies: {fileID: 0}
   enemigos: {fileID: 0}
   totalOfEnemiesToKill: 25
+  activeScene: 
 --- !u!114 &4510256062737760929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +71,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 5871329557062523849, guid: 647cbcec550da47418810f736f1c8274, type: 3}
   - {fileID: 1962189199187282580, guid: 0e1d51ad97ef6fb4090ec5dcd4351823, type: 3}
-  spawnRate: 2
+  spawnRate: 4
+  activeScene: 
 --- !u!1 &4510256064173611075
 GameObject:
   m_ObjectHideFlags: 0

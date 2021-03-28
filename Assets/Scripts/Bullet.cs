@@ -46,7 +46,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            btime = 0.5f;
+            btime = 0.7f;
         }
     }
 }

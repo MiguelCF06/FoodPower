@@ -17,6 +17,7 @@ public class Manager : MonoBehaviour
     public Image enemigos;
     public int totalOfEnemiesToKill;
     public string activeScene;
+    public Sound sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class Manager : MonoBehaviour
         PauseMenu.SetActive(false);
         GameOver.SetActive(false);
         activeScene = SceneManager.GetActiveScene().name.ToString();
+        sound = FindObjectOfType<Sound>();
 
         if (activeScene == "Level01")
             totalOfEnemiesToKill = 25;
@@ -74,6 +76,7 @@ public class Manager : MonoBehaviour
             Time.timeScale = 0;
             pause = true;
             PauseMenu.SetActive(true);
+            sound.PlayPause();
         }
         else
         {
@@ -107,5 +110,11 @@ public class Manager : MonoBehaviour
         Time.timeScale = 1;
         pause = false;
         PauseMenu.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Level01");
     }
 }
