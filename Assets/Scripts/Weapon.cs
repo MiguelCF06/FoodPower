@@ -22,12 +22,15 @@ public class Weapon : MonoBehaviour
     public bool defendingMode;
     public Manager manager;
     public WeaponType weaponType;
+    public Sound sound;
+    public AudioClip panAttack;
     #endregion
 
     private string activeScene;
 
     void Start()
     {
+        sound = FindObjectOfType<Sound>();
         canAttack = true;
         playerHamburguesa.SetActive(true);
         playerPan.SetActive(false);
@@ -54,6 +57,7 @@ public class Weapon : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.X) && canAttack && !manager.pause)
                 {
+                    sound.PlaySound(panAttack);
                     playerHamburguesa.SetActive(false);
                     playerPan.SetActive(true);
                     anim.SetTrigger("pan");

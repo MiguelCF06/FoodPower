@@ -8,8 +8,7 @@ public class Sound : MonoBehaviour
     public Slider slider;
     public float sliderValue;
     AudioSource  audioSource;
-    public AudioClip pauseSound;
-
+    public AudioClip buttonSound;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -24,8 +23,14 @@ public class Sound : MonoBehaviour
         AudioListener.volume = slider.value;
     }
 
-    public void PlayPause()
+    public void PlaySound(AudioClip clip)
     {
-        audioSource.PlayOneShot(pauseSound);
+        audioSource.PlayOneShot(clip);
     }
+
+    public void PlayButton()
+    {
+        audioSource.PlayOneShot(buttonSound);
+    }
+    
 }

@@ -359,6 +359,8 @@ MonoBehaviour:
   defendingMode: 0
   manager: {fileID: 0}
   weaponType: 0
+  sound: {fileID: 0}
+  panAttack: {fileID: 8300000, guid: 640a9e136cfe5554d8349548fd6b9adc, type: 3}
 --- !u!114 &3081957516508604674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +379,8 @@ MonoBehaviour:
   manager: {fileID: 0}
   playerHealth: {fileID: 0}
   healthI: {fileID: 0}
+  sound: {fileID: 0}
+  playerdamage: {fileID: 8300000, guid: 8886bc717af911040b86c0c65583d261, type: 3}
 --- !u!1 &3081957516797429149
 GameObject:
   m_ObjectHideFlags: 0

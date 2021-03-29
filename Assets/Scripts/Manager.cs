@@ -18,6 +18,8 @@ public class Manager : MonoBehaviour
     public int totalOfEnemiesToKill;
     public string activeScene;
     public Sound sound;
+    public AudioClip pauseSound;
+    public AudioClip gameoverSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +78,7 @@ public class Manager : MonoBehaviour
             Time.timeScale = 0;
             pause = true;
             PauseMenu.SetActive(true);
-            sound.PlayPause();
+            sound.PlaySound(pauseSound);
         }
         else
         {
@@ -88,6 +90,7 @@ public class Manager : MonoBehaviour
 
     public void SetGameOver()
     {
+        sound.PlaySound(gameoverSound);
         Time.timeScale = 0;
         pause = true;
         gameOver = true;

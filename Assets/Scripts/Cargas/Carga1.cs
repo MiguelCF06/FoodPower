@@ -11,7 +11,7 @@ public class Carga1 : MonoBehaviour
     }
     IEnumerator fade1()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene("Cinematica1");
         Time.timeScale = 1;
     }

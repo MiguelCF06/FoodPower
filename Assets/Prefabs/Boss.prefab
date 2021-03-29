@@ -317,6 +317,7 @@ MonoBehaviour:
   startTimeBtwShots: 3
   bossHealth: {fileID: 0}
   bossColor: {fileID: 0}
+  fade: {fileID: 0}
 --- !u!61 &1041547541
 BoxCollider2D:
   m_ObjectHideFlags: 0

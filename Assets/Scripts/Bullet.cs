@@ -8,12 +8,16 @@ public class Bullet : MonoBehaviour
     public int damage = 20;
     public Rigidbody2D rigidBody2D;
     public float btime;
+    public Sound sound;
+    public AudioClip hamburguesa;
 
     // Start is called before the first frame update
     void Start()
     {
+        sound = FindObjectOfType<Sound>();
         rigidBody2D.velocity = transform.right * speed;
         StartCoroutine("destroyBullet");
+        sound.PlaySound(hamburguesa);
     }
 
     void OnTriggerEnter2D(Collider2D collider) {

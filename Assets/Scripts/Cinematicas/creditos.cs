@@ -5,13 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class creditos : MonoBehaviour
 {
+    public GameObject fade;
+
    void Start() 
    {
-       StartCoroutine("fade1");
+       StartCoroutine("startscene");
    }
-   IEnumerator fade1()
+   IEnumerator startscene()
     {
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(60);
+        clickbutton();
+    }
+
+    public void clickbutton()
+    {
+        fade.SetActive(true);
+        StartCoroutine("fade1");
+    }
+    IEnumerator fade1()
+    {
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("MainMenu");
     }
 }

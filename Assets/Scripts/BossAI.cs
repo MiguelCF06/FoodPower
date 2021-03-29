@@ -14,6 +14,7 @@ public class BossAI : MonoBehaviour
     public float startTimeBtwShots;
     public Text bossHealth;
     public Image bossColor;
+    public GameObject fade;
     #endregion
 
     #region Private variables
@@ -57,9 +58,9 @@ public class BossAI : MonoBehaviour
 
     public void Die()
     {
+        fade.SetActive(true);
         bossHealth.text = "0%";
         Destroy(gameObject);
-        SceneManager.LoadScene("CinematicaFinal");
     }
 
     private void SetHealthColor()

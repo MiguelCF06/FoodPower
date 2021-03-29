@@ -1059,6 +1059,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8190977890044369698}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1645283990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1822,3 +1834,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55ff748dd66b31c459f57660ac957554, type: 3}
+--- !u!114 &8190977890044369698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8190977890880974075, guid: 55ff748dd66b31c459f57660ac957554, type: 3}
+  m_PrefabInstance: {fileID: 8190977890044369697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b1a3f95c6aed447bb081c45e6d59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

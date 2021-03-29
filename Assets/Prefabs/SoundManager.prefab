@@ -141,5 +141,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  sliderValue: 0
-  pauseSound: {fileID: 0}
+  sliderValue: 1
+  buttonSound: {fileID: 8300000, guid: aaa8465c2694a4f42856568d5e9602f7, type: 3}

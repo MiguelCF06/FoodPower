@@ -11,6 +11,8 @@ public class PlayerStatus : MonoBehaviour
     public Manager manager;
     public Text playerHealth;
     public Image healthI;
+    public Sound sound;
+    public AudioClip playerdamage;
 
     void Update() 
     {
@@ -21,11 +23,13 @@ public class PlayerStatus : MonoBehaviour
 
     void Start()
     {
+        sound = FindObjectOfType<Sound>();
         amountOfPoints = 0;
     }
 
     public void TakeDamage(int damage)
     {
+        sound.PlaySound(playerdamage);
         health -= damage;
         StartCoroutine("changePlayerColor");
 

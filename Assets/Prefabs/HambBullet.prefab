@@ -138,3 +138,5 @@ MonoBehaviour:
   damage: 20
   rigidBody2D: {fileID: 1628883096303261446}
   btime: 0
+  sound: {fileID: 0}
+  hamburguesa: {fileID: 8300000, guid: 540886370928e4344bbaebc99c25b714, type: 3}
