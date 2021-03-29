@@ -44,6 +44,12 @@ public class PlayerStatus : MonoBehaviour
         manager.SetGameOver();
     }
 
+    public void AddHealth(int newHealth)
+    {
+        if (health < 100)
+            health += newHealth;
+    }
+
     public void AssignPoints(int points)
     {
         if (amountOfPoints == manager.totalOfEnemiesToKill)

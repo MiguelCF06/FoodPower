@@ -854,6 +854,10 @@ PrefabInstance:
       propertyPath: pauseSound
       value: 
       objectReference: {fileID: 8300000, guid: 12d1b0be0752d4242bb6f5968efc004a, type: 3}
+    - target: {fileID: 8190977890880974075, guid: 55ff748dd66b31c459f57660ac957554, type: 3}
+      propertyPath: sliderValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55ff748dd66b31c459f57660ac957554, type: 3}
 --- !u!114 &2067790051 stripped
@@ -1186,6 +1190,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3746321790182855421, guid: 8d563035dfc109046b5ec602bfef14c4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1366164163}
+    - target: {fileID: 3746321790182855421, guid: 8d563035dfc109046b5ec602bfef14c4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3746321790232503871, guid: 8d563035dfc109046b5ec602bfef14c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1207,6 +1219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4510256062737760929, guid: f8c00c2e4c3147647bf74b706da5ef21, type: 3}
+      propertyPath: spawnRate
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4510256062737760956, guid: f8c00c2e4c3147647bf74b706da5ef21, type: 3}
       propertyPath: m_Name
       value: GameManager

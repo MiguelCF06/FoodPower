@@ -53,7 +53,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         int pointsToAssign = 1;
+        int amountOfHealthToPlayer = 5;
         assignPoints.AssignPoints(pointsToAssign);
+        assignPoints.AddHealth(amountOfHealthToPlayer);
         Destroy(gameObject);
     }
 }

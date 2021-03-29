@@ -331,7 +331,9 @@ MonoBehaviour:
   m_Text: 'Ahora tienes Superpoder Escudo para cubrirte,con la tecla c
 
     El boss
-    muere disparandole a los ojos'
+    muere disparandole a los ojos
+
+    y a la parte de abajo con el pan'
 --- !u!222 &504595033
 CanvasRenderer:
   m_ObjectHideFlags: 0

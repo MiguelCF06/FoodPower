@@ -30,4 +30,9 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("Carga1");
         Time.timeScale = 1;
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

@@ -15,17 +15,10 @@ public class Cinematica1 : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         fade.SetActive(false);
-        StartCoroutine("cinematic");
     }
-    IEnumerator cinematic()
+    
+    public void LoadScene()
     {
-        yield return new WaitForSeconds(7);
-        fade.SetActive(false);
-        StartCoroutine("loadscene");
-    }
-    IEnumerator loadscene()
-    {
-        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("Carga2");
     }
 }
