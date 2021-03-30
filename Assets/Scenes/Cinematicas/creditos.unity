@@ -1702,13 +1702,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "GRACIAS POR JUGAR\n\nJuego hecho por:\n- miguel angel cipamocha\n- juan
-    david suarez\n\naportes\n\nmiguel:\n- jugabilidad\n- movimientos personajes\n-
-    IA enemigos\n\njuan:\n- Game art, sprites\n- musica\n- animaciones\n\nambos:\n-
-    historia\n- cinematicas\n- UI-UX\n- Scripts/Codigo\n\n(todo fue creado por nosotros)\n\nprogramas
-    usados:\n- Unity v2020.3.1\n- Visual Studio Code\n- Aseprite\n- Studio One 4
-    Pro\n\nredes\n\ntwitter\n- @miguelcf06\n- @juandsuarezw\n\nDON PACHI JAM #3 2021\n\nbogota
-    colombia\n\nTo be continued(?)\n\nvolver al menu principal \u2192\n"
+  m_Text: "ENVIANOS CAPTURA DE TU MEJOR\nTIEMPO A NUESTRO TWITTER\n\nGRACIAS POR
+    JUGAR\n\nJuego hecho por:\n- miguel angel cipamocha\n- juan david suarez\n\naportes\n\nmiguel:\n-
+    jugabilidad\n- movimientos personajes\n- IA enemigos\n\njuan:\n- Game art, sprites\n-
+    musica\n- animaciones\n\nambos:\n- historia\n- cinematicas\n- UI-UX\n- Scripts/Codigo\n\n(todo
+    fue creado por nosotros)\n\nprogramas usados:\n- Unity v2020.3.1\n- Visual Studio
+    Code\n- Aseprite\n- Studio One 4 Pro\n\nredes\n\ntwitter\n- @miguelcf06\n- @juandsuarezw\n\nDON
+    PACHI JAM #3 2021\n\nbogota colombia\n\nTo be continued(?)\n\nvolver al menu
+    principal \u2192\n"
 --- !u!222 &2039625270
 CanvasRenderer:
   m_ObjectHideFlags: 0

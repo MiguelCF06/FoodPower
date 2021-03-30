@@ -20,6 +20,7 @@ public class BossAI : MonoBehaviour
     #region Private variables
     private Transform player;
     private float timeBtwShots;
+    private Timer timer;
     #endregion
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class BossAI : MonoBehaviour
     {
         health = 1000;
         timeBtwShots = startTimeBtwShots;
+        timer = FindObjectOfType<Timer>();
     }
 
     // Update is called once per frame
@@ -60,6 +62,9 @@ public class BossAI : MonoBehaviour
     {
         fade.SetActive(true);
         bossHealth.text = "0%";
+        timer.finish = true;
+        PlayerPrefs.SetFloat("saveActualTime", timer.actualTime);
+        PlayerPrefs.SetFloat("bestTime", PlayerPrefs.GetFloat("saveActualTime"));
         Destroy(gameObject);
     }
 

@@ -7,6 +7,6 @@ public class finalfade : MonoBehaviour
 {
     public void Finalfadexd()
     {
-        SceneManager.LoadScene("CinematicaFinal");
+        SceneManager.LoadScene("Carga4 1");
     }
 }

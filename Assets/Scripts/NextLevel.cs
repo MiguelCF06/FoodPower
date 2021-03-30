@@ -9,9 +9,11 @@ public class NextLevel : MonoBehaviour
     public Text cantPassLevelText;
 
     private Manager manager;
+    private Timer timer;
 
     void Start()
     {
+        timer = FindObjectOfType<Timer>();
         manager = GameObject.Find("GameManager").GetComponent<Manager>();
     }
 
@@ -20,6 +22,7 @@ public class NextLevel : MonoBehaviour
         if (collider.gameObject.tag == "Player" && playerCanPassLevel)
         {
             manager.LoadLevel();
+            PlayerPrefs.SetFloat("saveActualTime", timer.actualTime);
         }
         else if (collider.gameObject.tag == "Player" && !playerCanPassLevel && cantPassLevelText != null)
         {
