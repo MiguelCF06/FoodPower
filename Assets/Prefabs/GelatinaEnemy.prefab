@@ -271,6 +271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 1
   health: 20
+  dieEnemy: {fileID: 8300000, guid: fb440a37f011b6043b202fe0be471ddc, type: 3}
+  sound: {fileID: 0}
 --- !u!114 &1962189199187282667
 MonoBehaviour:
   m_ObjectHideFlags: 0

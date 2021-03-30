@@ -15,9 +15,12 @@ public class Enemy : MonoBehaviour
 
     private Weapon playerWeaponType;
     private PlayerStatus assignPoints;
+    public AudioClip dieEnemy;
+    public Sound sound;
 
     void Awake()
     {
+        sound = FindObjectOfType<Sound>();
         playerWeaponType = GameObject.Find("Player").GetComponent<Weapon>();
         assignPoints = GameObject.Find("Player").GetComponent<PlayerStatus>();
     }
@@ -52,6 +55,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        sound.PlaySound(dieEnemy);
         int pointsToAssign = 1;
         int amountOfHealthToPlayer = 5;
         assignPoints.AssignPoints(pointsToAssign);

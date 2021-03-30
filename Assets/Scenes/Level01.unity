@@ -1378,10 +1378,6 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 1596294857}
-    - target: {fileID: 4510256062737760958, guid: f8c00c2e4c3147647bf74b706da5ef21, type: 3}
-      propertyPath: gameoverSound
-      value: 
-      objectReference: {fileID: 8300000, guid: c2e005f823eb9904f9d3fb9d8c87848b, type: 3}
     - target: {fileID: 4510256062737760959, guid: f8c00c2e4c3147647bf74b706da5ef21, type: 3}
       propertyPath: m_RootOrder
       value: 6

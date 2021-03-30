@@ -58,6 +58,7 @@ MonoBehaviour:
   activeScene: 
   sound: {fileID: 0}
   pauseSound: {fileID: 8300000, guid: 12d1b0be0752d4242bb6f5968efc004a, type: 3}
+  gameoverSound: {fileID: 8300000, guid: c2e005f823eb9904f9d3fb9d8c87848b, type: 3}
 --- !u!114 &4510256062737760929
 MonoBehaviour:
   m_ObjectHideFlags: 0

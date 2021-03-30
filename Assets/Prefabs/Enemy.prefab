@@ -350,8 +350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  assignPoints: {fileID: 3081957516508604674, guid: 7be4bd43c8f1abc4cae04ddc1d43fa43, type: 3}
   health: 20
+  dieEnemy: {fileID: 8300000, guid: fb440a37f011b6043b202fe0be471ddc, type: 3}
+  sound: {fileID: 0}
 --- !u!114 &5871329557062523830
 MonoBehaviour:
   m_ObjectHideFlags: 0
