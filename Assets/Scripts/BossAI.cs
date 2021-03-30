@@ -64,7 +64,6 @@ public class BossAI : MonoBehaviour
         bossHealth.text = "0%";
         timer.finish = true;
         PlayerPrefs.SetFloat("saveActualTime", timer.actualTime);
-        PlayerPrefs.SetFloat("bestTime", PlayerPrefs.GetFloat("saveActualTime"));
         Destroy(gameObject);
     }
 

@@ -17,13 +17,29 @@ public class BestTime : MonoBehaviour
     void Start()
     {
         timer = FindObjectOfType<Timer>();
-        bestTime = PlayerPrefs.GetFloat("bestTime");
+    }
+
+    void Update()
+    {
         actualTime = PlayerPrefs.GetFloat("saveActualTime");
 
-        if (bestTime > actualTime)
+        if (PlayerPrefs.GetInt("gameTries") == 0)
+        {
             bestTime = actualTime;
+            PlayerPrefs.SetFloat("bestTime", bestTime);
+        }
         else
-            bestTime = PlayerPrefs.GetFloat("bestTime");
+        {
+            if (actualTime < bestTime)
+            {
+                bestTime = actualTime;
+                PlayerPrefs.SetFloat("bestTime", bestTime);
+            }
+            else if (actualTime > bestTime)
+            {
+                bestTime = PlayerPrefs.GetFloat("bestTime");
+            }
+        }
 
         string minutes = ((int) actualTime / 60).ToString();
         string seconds = (actualTime % 60).ToString("00.00");
@@ -32,11 +48,9 @@ public class BestTime : MonoBehaviour
         string seconds2 = (bestTime % 60).ToString("00.00");
 
         actualTimeText.text = "TU TIEMPO FUE:\n" + minutes + ":" + seconds;
-        bestTimeText.text = "TU MEJOR TIEMPO:\n" + minutes2 + ":" + seconds;
-    }
+        bestTimeText.text = "TU MEJOR TIEMPO:\n" + minutes2 + ":" + seconds2;
 
-    void Update()
-    {
+
         if (Input.GetKeyDown(KeyCode.Space))
             SceneManager.LoadScene("CinematicaFinal");
     }

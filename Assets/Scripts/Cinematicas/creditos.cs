@@ -7,8 +7,13 @@ public class creditos : MonoBehaviour
 {
     public GameObject fade;
 
+    private int tries = 0;
+
    void Start() 
    {
+       tries += 1;
+       PlayerPrefs.SetInt("gameTries", tries);
+       Debug.Log("Tries: " + PlayerPrefs.GetInt("gameTries"));
        StartCoroutine("startscene");
    }
    IEnumerator startscene()

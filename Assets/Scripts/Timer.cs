@@ -17,7 +17,10 @@ public class Timer : MonoBehaviour
     {
         activeScene = SceneManager.GetActiveScene().name.ToString();
         if (activeScene == "Level01")
+        {
             actualTime = 0.0f;
+            PlayerPrefs.SetFloat("saveActualTime", 0f);
+        }
         else if (activeScene == "Level02")
             actualTime = PlayerPrefs.GetFloat("saveActualTime");
         else if (activeScene == "Level03")

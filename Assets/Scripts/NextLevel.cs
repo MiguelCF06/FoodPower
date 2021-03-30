@@ -23,6 +23,7 @@ public class NextLevel : MonoBehaviour
         {
             manager.LoadLevel();
             PlayerPrefs.SetFloat("saveActualTime", timer.actualTime);
+            Debug.Log("Tries every level: " + PlayerPrefs.GetInt("gameTries"));
         }
         else if (collider.gameObject.tag == "Player" && !playerCanPassLevel && cantPassLevelText != null)
         {
