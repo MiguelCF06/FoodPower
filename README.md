@@ -24,6 +24,7 @@ scientist that were there became in food, and somehow the kid acquire powers lik
 
 ## Play it
 Here you can download our game and play it, is only available for windows, hope you like it!
+[Food Power](https://juandavidsuarez.itch.io/foodpower)
 
 ## Developers
 
