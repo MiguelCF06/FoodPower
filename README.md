@@ -23,8 +23,8 @@ In this game you play as a kid that enters in a laboratory and makes a mistake, 
 scientist that were there became in food, and somehow the kid acquire powers like throw burguers, a baguette sword and become in jelly.
 
 ## Play it
-Here you can download our game and play it, is only available for windows, hope you like it!
-[Food Power](https://juandavidsuarez.itch.io/foodpower)
+Here [Food Power](https://juandavidsuarez.itch.io/foodpower) you can download our game and play it, is only available for windows, hope you like it!
+
 
 ## Developers
 
