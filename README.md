@@ -4,7 +4,7 @@
 [![Issues][issues-shield]][issues-url]
 
 <p align="center">
-  <img src="https://github.com/MiguelCF06/FoodPower/tree/main/Images/Food Power image.jpeg" width="400" height="260">
+  <img src="https://github.com/MiguelCF06/FoodPower/blob/main/Images/Food%20Power%20image.jpeg" width="400" height="260">
 
   <h3 align="center">Food Power</h3>
 
@@ -21,6 +21,9 @@
 Develop a game with the theme of Ridiculous Powers in one week for the Don Pachi Game Jam.
 In this game you play as a kid that enters in a laboratory and makes a mistake, this mistake cause that the
 scientist that were there became in food, and somehow the kid acquire powers like throw burguers, a baguette sword and become in jelly.
+
+## Play it
+Here you can download our game and play it, is only available for windows, hope you like it!
 
 ## Developers
 
